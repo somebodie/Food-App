@@ -20,7 +20,7 @@ app.use(logger('dev'));
 
 app.use('/users', usersController);
 app.use('/users/:id/meals', mealsController);
-// app.use('/sessions', sessionsController);
+app.use('/sessions', sessionsController);
 
 app.listen(3000, function(){
   console.log( "Can You Smell What the Rock is Cooking?");
