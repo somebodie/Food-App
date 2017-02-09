@@ -18,14 +18,17 @@ Weekly Planner:
 - [ ] On recipe page user can store personal idea for food.
 - [ ] As a logged in user, I want to be able to log out.
 - [ ] As a logged in user, I do not want to see log in or register buttons.
-- [ ] User can edit the ingredients
+- [ ] As a user, I want to be able to view nutritional content for the recipe
+- [ ] As a user, I want to be able to input nutritional information for the recipe
+
+<!-- - [ ] User can edit the ingredients
 - [ ] User can delete items
 - [ ] User can edit recipe
-- [ ] User can delete recipe.
+- [ ] User can delete recipe. -->
 
 Reach Goals:
+- [ ] API (https://developer.edamam.com/edamam-recipe-api)
 - [ ] Phone numbers and text messages. (Maybe as reminders)
 - [ ] Sign up automatically leads to show page.
 - [ ] Recommendations on recipe page (see API)
 - [ ] Swap outs (example trello)
-- [ ] API (https://developer.edamam.com/edamam-recipe-api)
