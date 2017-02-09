@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(logger('dev'));
 
-// app.use('/users', usersController);
+app.use('/users', usersController);
 app.use('/users/:id/meals', mealsController);
 // app.use('/sessions', sessionsController);
 
