@@ -18,10 +18,10 @@ Weekly Planner:
 - [ ] On recipe page user can store personal idea for food.
 - [ ] As a logged in user, I want to be able to log out.
 - [ ] As a logged in user, I do not want to see log in or register buttons.
-- [ ] User can edit the ingredients
-- [ ] User can delete items
-- [ ] User can edit recipe
-- [ ] User can delete recipe.
+  - [ ] User can edit the ingredients
+  - [ ] User can delete items
+  - [ ] User can edit recipe
+  - [ ] User can delete recipe.
 
 Reach Goals:
 - [ ] Phone numbers and text messages. (Maybe as reminders)
