@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Weekly Planner:
  - [ ] Need a server to listen for requests
  - [ ] Need an index.html to load for homepage
@@ -82,3 +83,5 @@ Weekly Planner:
 - [ ] User can delete items
 - [ ] User can edit recipe
 - [ ] User can delete recipe.
+=======
+>>>>>>> 259c39344ba78eb1ccd08e373bcebe6e61b534a2
