@@ -4,12 +4,15 @@ User: {
   Password: String,
   Schedule:{  Date: Date,
               Day of Week: String,
-              Ingredient: {  Main Ingredient: String,
-                             Secondary Ingredient: String,
+              Ingredient: {  Ingredients: {
+                                    [name: String,
+                                    amount: String]},
                              Recommended Recipe:{ Name: String,
                                                   Image: Link,
                                                   Calories/Serving: Number,
                                                   Fat (in g): Number,
                                                   Protein(in g): Number,
-                                                  Carbs (in g): Number}}}
+                                                  Carbs (in g): Number}
+                          }
+            }
 }
