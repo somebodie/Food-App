@@ -1,4 +1,4 @@
-1. User see's homepage with about on app.
+1. User visits homepage without being logged in
 2. User can see images of what can be done with app.
 3. User prompted to sign up/login.
 4. User goes to sign up requires email, password, name.
