@@ -13,7 +13,7 @@ var MealSchema = new Schema({
 var UserSchema = new Schema({
   name: String,
   email: String,
-  password: String,
+  password_digest: String,
   recipes: [MealSchema]
 });
 
