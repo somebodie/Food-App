@@ -22,6 +22,9 @@ Weekly Planner:
 - [ ] User can delete items
 - [ ] User can edit recipe
 - [ ] User can delete recipe.
+- [ ] As a user, I want to be able to view nutritional content for the recipe
+- [ ] As a user, I want to be able to input nutritional information for the recipe
+
 
 Reach Goals:
 - [ ] Phone numbers and text messages. (Maybe as reminders)
