@@ -1,0 +1,18 @@
+<form class="signUp" ng-show='new'>
+    <label for="name">First Name:</label>
+    <input type="text" name="name" placeholder="What Should We Call You?">
+    <label for="email">Email:</label>
+    <input type="email" name="email" placeholder="How can we email you?">
+    <label for="password">Password:</label>
+    <input type="text" name="password" placeholder="Please don't forget it">
+    <button type="button" name="signup">Sign Up!</button>
+</form>
+
+<!-- can also do hide and show in combination where one is always false so they never show at the same time -->
+<form class="login" ng-show='return'>
+    <label for="email">Email:</label>
+    <input type="email" name="email" placeholder="YOUR BACK? Who are you again?">
+    <label for="password">Password:</label>
+    <input type="text" name="password" placeholder="What's their password?">
+    <button type="button" name="login">Login!</button>
+</form>
