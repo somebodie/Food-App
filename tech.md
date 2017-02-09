@@ -10,3 +10,6 @@ Delete - Schedule
 4. Schedule can be deleted
 5. Schedule can be edited
 6. Users can create own recipes.
+7. Screenshots of example page to add to homepage
+8. User can sign up (email name and password)
+9. User can login (email and password)

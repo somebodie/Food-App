@@ -20,8 +20,8 @@ Weekly Planner:
 20. User will be able to logout.
 
 Reach Goals:
-1. Phone numbers and text messages.
+1. Phone numbers and text messages. (Maybe as reminders)
 2. Sign up automatically leads to show page.
-3. Recommendations on recipe page
-4. Swap outs
-5. API
+3. Recommendations on recipe page (see API)
+4. Swap outs (example trello)
+5. API (https://developer.edamam.com/edamam-recipe-api)
