@@ -34,11 +34,46 @@ Weekly Planner:
   - [ ] Need a getMeal() client method
   - [ ] Need a meal show route (server-side)
 - [ ] As a logged in user, I want to be able to edit and delete individual meals.
+  - [ ] Meal show partial needs an edit button
+  - [ ] Meal show partial needs a delete button
+  - [ ] Meal show partial needs an edit form that shows up when the edit button is clicked
+  - [ ] Edit form should trigger client method updateMeal()
+  - [ ] updateMeal() should make a put request to the server
+  - [ ] server needs a meal update route
+  - [ ] update meal route should update the database entry
+  - [ ] update meal route should respond with the updated meal object
 - [ ] As a logged in user, I want to be able to edit the order of meals for the week.
+  - [ ] Overview page needs an edit button
+  - [ ] Edit button should reveal update week form
+  - [ ] Option 1: Update week form should allow meals to be dragged to different days
+  - [ ] Option 2: Update week form should have drop down menus to select meals for each day
+  - [ ] Overview edit form should execute updateWeek() method
+  - [ ] updateWeek() method should make a put request to the server
+  - [ ] the server needs a put route for updating the week
+  - [ ] the update week server route should respond with an updated week object
+  - [ ] the update week server route should update the week in the database
 - [ ] As a logged in user, I want to be able to add meals to the week, including ingredients, a url, and a title.
+  - [ ] There should be an add meal button on the week overview page
+  - [ ] The add meal button should run the addMeal() method
+  - [ ] The addMeal() method should create an empty meal (should make a post request to server)
+  - [ ] addMeal() should open the new empty meal show page with the edit form visible
+  - [ ] add meal post route should create a new empty meal
 - [ ] As a logged in user, I want to be able to change what week I am viewing on the overview page.
+ - [ ] The week overview page needs a select week dropdown
+ - [ ] The select week dropdown should change the visible week, probably using an angular method getWeek()
+ - [ ] getWeek() should make a get request to the server for the selected week
+ - [ ] server should have a week show route that returns the requested week
 - [ ] As a logged in user, I want to be able to see a grocery list for the week.
+  - [ ] The week overview page should have a get grocery list button
+  - [ ] The get grocery list button should trigger getGroceryList()
+  - [ ] getGroceryList() makes a get request to the server for the entire weeks groceries
+  - [ ] the grocery get route server-side should retrieve the groceries for each meal in the week and return them.
+  - [ ] there should be a grocery list partial
 - [ ] As a user who is viewing the grocery list, I want to be able to mark items that are already on hand.
+ - [ ] There should be a mark on hand button on each grocery items
+ - [ ] the mark on hand button should trigger markOnHand()
+ - [ ] markOnHand() triggers a put route to the server, setting onHand to true.
+ - [ ] grocery update route should update the db and respond with the updated list
 - [ ] As a user who just added a new meal, I want to be redirected to the overview page.
 - [ ] On recipe page user can store personal idea for food.
 - [ ] As a logged in user, I want to be able to log out.
