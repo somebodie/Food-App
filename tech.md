@@ -82,3 +82,7 @@ Weekly Planner:
 - [ ] User can delete items
 - [ ] User can edit recipe
 - [ ] User can delete recipe.
+- [ ] As a user, I want to be able to view nutritional content for the recipe
+  - [ ] New recipe form should contain nutritional information
+  - [ ] Recipe show page should show nutritional information
+- [ ] As a user, I want to be able to input nutritional information for the recipe
