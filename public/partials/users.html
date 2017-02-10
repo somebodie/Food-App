@@ -1,26 +1,33 @@
 <section class="signUp" ng-hide='newUser'>
+  <div id="signupform">
     <form>
         <!-- will fix to show when sign up was clicked newuser = false expect when sign up function clicked and turns it true as well returnuser must be turned false-->
-        <label for="name">First Name:</label>
-        <input type="text" name="name" placeholder="What's your name?">
-        <label for="email">Email:</label>
-        <input type="email" name="email" placeholder="How can we email you?">
-        <label for="password">Password:</label>
-        <input type="text" name="password" placeholder="Please don't forget it">
-        <button type="button" name="signup">Sign Up!</button>
+        <h2> Sign-up now to create your own weekly meal plan! </h2><br>
+        <label for="name">First Name:</label><br>
+        <input type="text" name="name" placeholder="What's your name?"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" name="email" placeholder="How can we email you?"><br>
+        <label for="password">Password:</label><br>
+        <input type="text" name="password" placeholder="Please don't forget it"><br>
+        <button class="signupbutton" type="button" name="signup">Sign Up!</button>
     </form>
+  <div>
 </section>
 
 <br>
 
+
 <!-- can also do hide and show in combination where one is always false so they never show at the same time -->
 <section class="login" ng-hide='returnUser'>
+  <div id="loginform">
     <form>
         <!-- will fix to show when log in was clicked returnUser = false expect when login up function clicked and turns it true as well newuser must turn false -->
-        <label for="email">Email:</label>
-        <input type="email" name="email" placeholder="Who are you again?">
-        <label for="password">Password:</label>
-        <input type="text" name="password" placeholder="What's the password?">
-        <button type="button" name="login">Login!</button>
+        <h2> Log-in now to view your weekly meal plan! </h2><br>
+        <label for="email">Email:</label><br>
+        <input type="email" name="email" placeholder="Who are you again?"><br>
+        <label for="password">Password:</label><br>
+        <input type="text" name="password" placeholder="What's the password?"><br>
+        <button class="loginbutton" type="button" name="login">Login!</button>
     </form>
+  </div>
 </section>
