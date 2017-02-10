@@ -37,6 +37,8 @@ router.put('/:mealId', function(req, res){
   .exec()
   .then(function(meal){
     meal.name = req.body.name;
+    meal.ingredients = req.body.ingredients;
+    meal.date = req.body.date;
 
     meal.save();
     res.json(meal);
