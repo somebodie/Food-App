@@ -1,9 +1,35 @@
-/*nav > a {
+/*index.html css*/
+/*apptitle*/
+.app-name{
+  color: white;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.3em;
+  margin-left: 20px;
+/*start of navbar css*/
+}
+.ul-navbar{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #5F96EB;
+  list-style-type: none;
+
+}
+.li-navbar {
+  float: right;
+  margin-top: 10px;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 14px;
   text-decoration: none;
-  display: inline-block;
+
 }
 
-.signUp {
-  background-color: red;
-  display: block;
-}*/
+.navbar-link{
+
+}
+/*end of navbar css*/
+h1{
+  clear: both;
+}
