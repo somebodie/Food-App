@@ -32,7 +32,7 @@ router.post('/', auth.authorize, function(req, res) {
         });
 });
 // Update meal route
-router.put('/:mealId', function(req, res){
+router.put('/:mealId', auth.authorize, function(req, res){
   Meal.findById(req.params.mealId)
   .exec()
   .then(function(meal){
@@ -48,13 +48,19 @@ router.put('/:mealId', function(req, res){
   })
 })
 // Meals show route
-router.get('/:mealId', function(req, res){
+router.get('/:mealId', auth.authorize, function(req, res){
   Meal.findById(req.params.mealId)
   .exec(function(err, meal){
     if(err){res.send(err);}
     res.json(meal);
   })
 })
-
+// Delete meal
+router.delete('/:mealId', auth.authorize, function(req, res){
+  Meal.findByIdAndRemove(req.params.mealId, function(err){
+    if(err) {res.send(err);}
+    res.json({status: 200, data: "success"});
+  })
+})
 
 module.exports = router;
