@@ -3,17 +3,18 @@ var Schema = mongoose.Schema;
 
 mongoose.Promise = global.Promise;
 
-var UserSchema = new Schema({
-  name: String,
-  email: String,
-  password: String,
-  Recipes: [Recipe Schema]
-});
 
 var MealSchema = new Schema({
   name: String,
-  Ingredients: [],
-  Date: Date
+  ingredients: [],
+  date: Date
+});
+
+var UserSchema = new Schema({
+  name: String,
+  email: String,
+  password_digest: String,
+  recipes: [MealSchema]
 });
 
 UserSchema.pre('save', function(next){
