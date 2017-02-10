@@ -19,10 +19,11 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(logger('dev'));
-
+// Cookie config courtesy of Colin Hart
 app.use(session({
     secret: "derpderpderpcats",
-    resave: true,
+    resave: false,
+    maxAge: 60 * 60 * 1000,
     saveUninitialized: false
 }));
 
