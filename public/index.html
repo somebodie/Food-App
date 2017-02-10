@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='foodApp'>
 
 <head>
     <meta charset="utf-8">
-    <title> Food is Life </title>
+    <title>Food is Life</title>
+    <!-- angular script -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-    <!-- <script src="/scripts/router.js"></script> -->
+    <script src="/scripts/router.js"></script>
     <!-- <script src="/scripts/app.js"></script> -->
+    <!-- <script type="scripts/mealsController.js"></script>
+    <script type="scripts/sessionsController.js"></script> -->
+    <script src="/scripts/usersController.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <a href="#">Log in</a>
-            <a href="#">Sign Up</a>
-            <a href="#">Log out</a>
+        <!-- nav bar -->
+        <nav class="navbar">
+            <ul class="ul-navbar">
+                <li class="li-navbar" ui-sref='home'>Sign Out</li>
+                <li class="li-navbar" ui-sref='users'>Log In</li>
+                <li class="li-navbar" ui-sref='users'>Sign Up</li>
+                <li class="li-navbar" ui-sref='home'>Home Page</li>
+                <h3 class="app-name"> What's Cooking?  </h3>
+                <ul>
         </nav>
     </header>
+
+
     <ui-view>
+        <!-- the other views show up here -->
     </ui-view>
 </body>
 
