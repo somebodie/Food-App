@@ -6,11 +6,15 @@ var auth = require('../helpers/auth.js');
 var Meal = require('../models/meal.js');
 var User = require('../models/user.js');
 
-
-router.get('/', function(req, res) {
-    res.send('Meals controller working');
+// Meals index route
+router.get('/', auth.authorize, function(req, res) {
+    Meal.find({_creator: req.params.id})
+    .exec(function(err, meals){
+      if(err) {console.log(err);}
+      res.json(meals);
+    })
 });
-
+// Create new meal
 router.post('/', auth.authorize, function(req, res) {
     User.findById(req.params.id)
         .exec()
