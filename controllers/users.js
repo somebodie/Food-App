@@ -10,7 +10,13 @@ router.post('/', auth.createSecure, function(req, res){
     email: req.body.email,
     password_digest: res.hashedPassword
   });
-  console.log(user);
+  user.save(function(err, user){
+    if(err) {
+      res.json({status: 500, error: err});
+    }
+    res.json(user)
+  });
+
 });
 
 
