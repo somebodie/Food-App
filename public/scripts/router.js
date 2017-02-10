@@ -16,21 +16,22 @@ function foodAppRouter($stateProvider, $urlRouterProvider) {
         .state('users', {
             url: '/users',
             templateUrl: '/partials/users.html',
-            controller: 'sessionsController as sessions'
+            controller: 'usersController as users',
         })
+        
         .state('main', {
             url: '/main',
             templateUrl: '/partials/main.html',
             controller: 'usersController as users'
         })
-        .state('show', {
-            url: '/show',
-            templateUrl: '/partials/show.html',
-            controller: 'mealsController as meals'
-        })
-        .state('show.recommended', { //trying to consider how to put a view into a view
-            url: '/show/recommended',
-            templateUrl: '/partials/recommended.html',
-            // controller: ''
-        })
+         .state('show', {
+             url: '/users/:id/meals',
+             templateUrl: '/partials/show.html',
+             controller: 'mealsController as meals'
+         })
+        //  .state('show.recommended', { //trying to consider how to put a view into a view
+        //      url: '/users/:id/meals/recommended',
+        //      templateUrl: '/partials/recommended.html',
+        //      controller: 'mealsController as meals'
+        //  })
 }
