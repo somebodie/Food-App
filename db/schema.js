@@ -5,38 +5,49 @@ mongoose.Promise = global.Promise;
 
 
 var MealSchema = new Schema({
-  name: String,
-  ingredients: [],
-  date: Date
+    name: String,
+    ingredients: [],
+    date: Date,
+    _creator: {
+        type: Number,
+        ref: 'User'
+    }
 });
 
 var UserSchema = new Schema({
-  name: String,
-  email: String,
-  password_digest: String,
-  recipes: [MealSchema]
+    name: String,
+    email: String,
+    password_digest: String,
+    recipes: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Meal'
+    }]
 });
 
-UserSchema.pre('save', function(next){
-  now = new Date();
-  this.updated_at = now;
+UserSchema.pre('save', function(next) {
+    now = new Date();
+    this.updated_at = now;
 
-  if(!this.created_at) {this.created_at = now}
-  next()
+    if (!this.created_at) {
+        this.created_at = now
+    }
+    next()
 });
 
-MealSchema.pre('save', function(next){
-  now = new Date();
-  this.updated_at = now;
+MealSchema.pre('save', function(next) {
+    now = new Date();
+    this.updated_at = now;
 
-  if(!this.created_at) {this.created_at = now}
-  next()
+    if (!this.created_at) {
+        this.created_at = now
+    }
+    next()
 });
 
 var UserModel = mongoose.model('User', UserSchema);
 var MealModel = mongoose.model('Meal', MealSchema);
 
 module.exports = {
-  User: UserModel,
-  Meal: MealModel
+    User: UserModel,
+    Meal: MealModel
 }
