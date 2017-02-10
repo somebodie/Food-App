@@ -30,6 +30,18 @@
 
 }
 /*end of navbar css*/
-h1{
-  clear: both;
+
+/*Users.html css*/
+#signupform{
+  text-align: center;
+}
+#loginform{
+  text-align: center;
+}
+
+.signupbutton{
+  margin-top: 10px;
+  width: 140px;
+  height: 30px;
+  font:
 }
