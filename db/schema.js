@@ -13,7 +13,7 @@ var MealSchema = new Schema({
     ingredients: [IngredientSchema],
     date: Date,
     _creator: {
-        type: Number,
+        type: String,
         ref: 'User'
     }
 });
