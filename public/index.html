@@ -9,7 +9,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script src="/scripts/router.js"></script>
-    <!-- <script src="/scripts/app.js"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <!-- <script type="scripts/mealsController.js"></script>
     <script type="scripts/sessionsController.js"></script> -->
     <script src="/scripts/usersController.js"></script>
@@ -17,19 +17,18 @@
 </head>
 
 <body>
-    <header>
-        <!-- nav bar -->
+  <header>
+      <!-- nav bar -->
         <nav class="navbar">
-            <ul class="ul-navbar">
-                <li class="li-navbar" ui-sref='home'>Sign Out</li>
-                <li class="li-navbar" ui-sref='users'>Log In</li>
-                <li class="li-navbar" ui-sref='users'>Sign Up</li>
-                <li class="li-navbar" ui-sref='home'>Home Page</li>
-                <h3 class="app-name"> What's Cooking?  </h3>
-                <ul>
+          <ul class="ul-navbar">
+            <li class="li-navbar" ui-sref='home'>Sign Out</li>
+            <li class="li-navbar" ui-sref='users'>Log In</li>
+            <li class="li-navbar" ui-sref='users'>Sign Up</li>
+            <li class="li-navbar" ui-sref='home'>Home Page</li>
+            <h3 class="app-name"> What's Cooking?  </h3>
+          <ul>
         </nav>
     </header>
-
 
     <ui-view>
         <!-- the other views show up here -->
