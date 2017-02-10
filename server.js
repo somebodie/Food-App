@@ -15,13 +15,21 @@ var mongoURI = process.env.MONGODB_URI || "mongodb://localhost/food_app"
 mongoose.connect(mongoURI);
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(logger('dev'));
+
+app.use(session({
+    secret: "derpderpderpcats",
+    resave: true,
+    saveUninitialized: false
+}));
 
 app.use('/users', usersController);
 app.use('/users/:id/meals', mealsController);
 app.use('/sessions', sessionsController);
 
-app.listen(3000, function(){
-  console.log( "Can You Smell What the Rock is Cooking?");
+app.listen(3000, function() {
+    console.log("Can You Smell What the Rock is Cooking?");
 });

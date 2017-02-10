@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='foodApp'>
 
 <head>
     <meta charset="utf-8">
-    <title> Food is Life </title>
+    <title>Food is Life</title>
+    <!-- angular script -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-    <!-- <script src="/scripts/router.js"></script> -->
-    <!-- <script src="/scripts/app.js"></script> -->
+    <script src="/scripts/router.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <!-- <script type="scripts/mealsController.js"></script>
+    <script type="scripts/sessionsController.js"></script> -->
+    <script src="/scripts/usersController.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -27,6 +31,7 @@
     </header>
 
     <ui-view>
+        <!-- the other views show up here -->
     </ui-view>
 </body>
 
