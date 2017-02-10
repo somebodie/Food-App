@@ -47,6 +47,14 @@ router.put('/:mealId', function(req, res){
     res.json(err);
   })
 })
+// Meals show route
+router.get('/:mealId', function(req, res){
+  Meal.findById(req.params.mealId)
+  .exec(function(err, meal){
+    if(err){res.send(err);}
+    res.json(meal);
+  })
+})
 
 
 module.exports = router;
