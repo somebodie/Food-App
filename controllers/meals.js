@@ -31,5 +31,20 @@ router.post('/', auth.authorize, function(req, res) {
             });
         });
 });
+// Update meal route
+router.put('/:mealId', function(req, res){
+  Meal.findById(req.params.mealId)
+  .exec()
+  .then(function(meal){
+    meal.name = req.body.name;
+
+    meal.save();
+    res.json(meal);
+  })
+  .catch(function(err){
+    res.json(err);
+  })
+})
+
 
 module.exports = router;
