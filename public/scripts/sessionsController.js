@@ -6,4 +6,9 @@ angular.module('foodApp')
 
 function sessionsController($http, $state) {
     console.log('hitting session controller');
+
+    function login() {
+      console.log('LOGIN!');
+      // $http.get('/login')
+    }
 }
