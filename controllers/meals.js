@@ -31,10 +31,19 @@ router.post('/', auth.authorize, function(req, res) {
                     }
                     meal.populate('_creator');
                 })
-                console.log(meal);
-                console.log(user);
             });
+        });
+
+    User.findById(req.params.id)
+        .populate('recipes')
+        .exec(function(err, user) {
+            if (err) {
+                console.log(err);
+            }
+            console.log(user);
         })
+
+
 
 });
 
