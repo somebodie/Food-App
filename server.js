@@ -22,7 +22,7 @@ app.use(logger('dev'));
 // Cookie config courtesy of Colin Hart
 app.use(session({
     secret: "derpderpderpcats",
-    resave: false,
+    resave: true,
     maxAge: 60 * 60 * 1000,
     saveUninitialized: false
 }));

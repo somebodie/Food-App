@@ -16,35 +16,16 @@ router.post('/', auth.authorize, function(req, res) {
         .exec()
         .then(function(user) {
             user.save(function(err) {
-                if (err) {
-                    console.log(err);
-                }
-
+                if (err) {console.log(err)}
                 var meal = new Meal({
                     name: req.body.name,
                     date: req.body.date,
                     _creator: user._id
                 });
-                meal.save(function(err, meal) {
-                    if (err) {
-                        console.log(err);
-                    }
-                    meal.populate('_creator');
-                })
+                meal.save();
+                res.json(meal);
             });
         });
-
-    User.findById(req.params.id)
-        .populate('recipes')
-        .exec(function(err, user) {
-            if (err) {
-                console.log(err);
-            }
-            console.log(user);
-        })
-
-
-
 });
 
 module.exports = router;
