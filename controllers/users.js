@@ -4,11 +4,11 @@ var mongoose = require('mongoose');
 var auth = require('../helpers/auth.js')
 var User = require('../models/user.js');
 
-router.post('/', function(req, res){
+router.post('/', auth.createSecure, function(req, res){
   var user = new User({
     name: req.body.name,
     email: req.body.email,
-    password_digest: req.body.hashedPassword
+    password_digest: res.hashedPassword
   });
   console.log(user);
 });
