@@ -28,6 +28,11 @@ var UserSchema = new Schema({
     }]
 });
 
+var GrocerySchema = new Schema({
+  weekOf: Date,
+  ingredients: [IngredientSchema]
+})
+
 UserSchema.pre('save', function(next) {
     now = new Date();
     this.updated_at = now;
@@ -48,6 +53,16 @@ MealSchema.pre('save', function(next) {
     next()
 });
 
+GrocerySchema.pre('save', function(next) {
+    now = new Date();
+    this.updated_at = now;
+
+    if (!this.created_at) {
+        this.created_at = now
+    }
+    next()
+});
+
 IngredientSchema.pre('save', function(next) {
     now = new Date();
     this.updated_at = now;
@@ -59,11 +74,13 @@ IngredientSchema.pre('save', function(next) {
 });
 
 var IngredientModel = mongoose.model('Ingredient', IngredientSchema);
+var GroceryModel = mongoose.model('Grocery', GrocerySchema);
 var UserModel = mongoose.model('User', UserSchema);
 var MealModel = mongoose.model('Meal', MealSchema);
 
 module.exports = {
     Ingredient: IngredientModel,
     User: UserModel,
-    Meal: MealModel
+    Meal: MealModel,
+    Grocery: GroceryModel
 }
