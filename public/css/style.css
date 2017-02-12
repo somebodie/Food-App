@@ -62,7 +62,7 @@
   font-size: 1em;
   color: black;
   background-color: #5F96EB;
-  
+
 }
 
 .loginbutton{
@@ -75,3 +75,102 @@
   background-color: #5F96EB;
 }
 /*end of users css*/
+
+/*home.html css*/
+#homebody{
+  background-image: url("../images/FoodWallpaper.jpg");
+  background-size: 1409px 1881px;
+  background-repeat: no-repeat;
+
+}
+
+.about{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#aboutID {
+  margin-top: 0;
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+}
+.user-page{
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+}
+
+.here{
+  color: #5F96EB;
+}
+
+.home-signin{
+  color: #5F96EB;
+}
+
+.learn-more{
+  text-align: center;
+}
+
+@keyframes user {
+  0% {width: 0px;}
+  10% {width: 60px;}
+  20% {width: 120px}
+  30% {width: 180px;}
+  40% {width: 240px;}
+  50% {width: 300px;}
+  60% {width: 360px;}
+  70% {width: 420px;}
+  80% {width: 480px;}
+  90% {width: 540px;}
+  100% {width: 600px;}
+}
+.user-image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 450px;
+  width: 600px;
+  animation-name: user;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+.home-calendar{
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+}
+
+.home-weekly-calendar{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 450px;
+  width: 600px;
+}
+
+.user-calendar{
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align; center;
+
+}
+.home-daily{
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+}
+.meal-explain{
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align; center;
+}
+.daily{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 450px;
+  width: 600px;
+}
