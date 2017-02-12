@@ -31,5 +31,36 @@ router.post('/', auth.authorize, function(req, res) {
             });
         });
 });
+// Update meal route
+router.put('/:mealId', auth.authorize, function(req, res){
+  Meal.findById(req.params.mealId)
+  .exec()
+  .then(function(meal){
+    meal.name = req.body.name;
+    meal.ingredients = req.body.ingredients;
+    meal.date = req.body.date;
+
+    meal.save();
+    res.json(meal);
+  })
+  .catch(function(err){
+    res.json(err);
+  })
+})
+// Meals show route
+router.get('/:mealId', auth.authorize, function(req, res){
+  Meal.findById(req.params.mealId)
+  .exec(function(err, meal){
+    if(err){res.send(err);}
+    res.json(meal);
+  })
+})
+// Delete meal
+router.delete('/:mealId', auth.authorize, function(req, res){
+  Meal.findByIdAndRemove(req.params.mealId, function(err){
+    if(err) {res.send(err);}
+    res.json({status: 200, data: "success"});
+  })
+})
 
 module.exports = router;
