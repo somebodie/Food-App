@@ -18,9 +18,9 @@
 <body>
     <header>
         <!-- nav bar -->
-        <nav class="navbar">
+        <nav ng-controller="usersController as users" class="navbar">
             <ul class="ul-navbar">
-                <li class="li-navbar" ui-sref='home'>Sign Out</li>
+                <li class="li-navbar" ng-click="users.signOut()">Sign Out</li>
                 <li class="li-navbar" ui-sref='login'>Log In</li>
                 <li class="li-navbar" ui-sref='register'>Sign Up</li>
                 <h3 class="app-name" ui-sref='home'> What's Cooking?</h3>

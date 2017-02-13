@@ -9,34 +9,29 @@ function usersController($http, $state) {
       console.log(user);
       $http.post('/users', user)
         .then(function(response) {
-          console.log(response);
+          $state.go('login');
         })
     }
 
     self.registerUser = registerUser;
 
-    function login() {
-        console.log('RETURNING USER');
+    function login(user) {
+        $http.post('/sessions/login', user)
+        .then(function(response){
+          $state.go('main')
+        });
     }
 
-    function markOnHand() {
-        // triggers a put route to the server, setting onHand to true
-        console.log('MARK !!!');
+    self.login = login;
+
+    function signOut(){
+      $http.delete('/sessions')
+      .then(function(response){
+        console.log(response);
+        $state.go('home');
+      })
     }
 
-    function updateWeek() {
-        // Edit button should reveal update week form
-        // updateWeek() method should make a put request to the server
+    self.signOut = signOut;
 
-    }
-
-    function getWeek() {
-        // getWeek() should make a get request to the server for the selected week
-    }
-
-    function getOverview() {
-      // TODO: Overview page needs each meal to be a link [this can be the partial that will show]
-    }
-
-    self.registerUser = registerUser;
 }
