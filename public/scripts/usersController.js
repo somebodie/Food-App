@@ -18,6 +18,7 @@ function usersController($http, $state) {
     function login(user) {
         $http.post('/sessions/login', user)
         .then(function(response){
+          console.log(response);
           $state.go('main')
         });
     }

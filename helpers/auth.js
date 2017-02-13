@@ -12,7 +12,7 @@ function loginUser(req, res, next) {
 
   User.findOne({ email: email})
     .then(function(user){
-      if(!user) {
+      if(user == null) {
         res.json({status: 401, data: "User not found"})
       }
       else if (bcrypt.compareSync(password, user.password_digest)) {
