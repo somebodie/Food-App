@@ -94,11 +94,15 @@
 #aboutID {
   margin-top: 0;
   font-family: 'Anton', sans-serif;
+  font-size: 3em;
   text-align: center;
+  text-shadow: .1em .2em #5F96EB;
 }
 .user-page{
   font-family: 'Anton', sans-serif;
+  font-size: 2.5em;
   text-align: center;
+  text-shadow: .1em .2em #5F96EB;
 }
 
 .here{
@@ -140,6 +144,9 @@
 .home-calendar{
   font-family: 'Anton', sans-serif;
   text-align: center;
+  font-size: 2.5em;
+  text-align: center;
+  text-shadow: .1em .2em #5F96EB;
 }
 
 .home-weekly-calendar{
@@ -160,7 +167,11 @@
 .home-daily{
   font-family: 'Anton', sans-serif;
   text-align: center;
+  font-size: 2.5em;
+  text-align: center;
+  text-shadow: .1em .2em #5F96EB;
 }
+
 .meal-explain{
   width: 600px;
   margin-left: auto;
@@ -173,4 +184,31 @@
   margin-right: auto;
   height: 450px;
   width: 600px;
+}
+/*End of Home CSS*/
+
+/*Main.html CSS*/
+.weekly-section {
+/*display: block;
+position: absolute;*/
+float: right;
+background-color: #5F96EB;
+min-width: 200px;
+height: 500px;
+overflow: scroll;
+text-align: center;
+margin-top: 8%;
+}
+.DayBox {
+  font-size: 1.5em;
+  width: 300px;
+  height: 230px;
+  border-top: solid black;
+}
+
+.Full-List{
+  width: 500px;
+  height: 500px;
+  text-align: center;
+
 }
