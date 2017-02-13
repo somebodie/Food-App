@@ -1,37 +1,47 @@
 // UI-Router
 angular.module('foodApp', ['ui.router'])
-    .config(foodAppRouter);
+    .config(FoodRouter);
 
-foodAppRouter.$inject = ['$stateProvider', '$urlRouterProvider'];
+FoodRouter.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-function foodAppRouter($stateProvider, $urlRouterProvider) {
-    //if url not recongized will go to index
+function FoodRouter($stateProvider, $urlRouterProvider) {
+    console.log('FOOD APP ROUTER IS LOADING');
+    // if url not recongized will go to index
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
         .state('home', {
             url: '/',
-            templateUrl: '/partials/home.html'
+            templateUrl: '/partials/home.html',
         })
-        .state('users', {
-            url: '/users',
-            templateUrl: '/partials/users.html',
-            controller: 'usersController as users',
+        .state('register', {
+            url: '/register',
+            templateUrl: '/partials/register.html',
+            controller: 'usersController as users'
         })
-        
+        .state('login', { //ALT: users.sessions if I can figure out the controllers
+            url: '/login',
+            templateUrl: '/partials/login.html',
+            controller: 'usersController as users'
+        })
         .state('main', {
             url: '/main',
             templateUrl: '/partials/main.html',
-            controller: 'usersController as users'
+            controller: 'mealsController as meals'
         })
-         .state('show', {
-             url: '/users/:id/meals',
-             templateUrl: '/partials/show.html',
-             controller: 'mealsController as meals'
-         })
-        //  .state('show.recommended', { //trying to consider how to put a view into a view
-        //      url: '/users/:id/meals/recommended',
-        //      templateUrl: '/partials/recommended.html',
-        //      controller: 'mealsController as meals'
-        //  })
+        .state('main.grocery', { //child of main to show in there view
+            url: '/list', //url is http://localhost:3000/#/main/list
+            templateUrl: 'partials/list.html',
+            controller: 'mealsController as meals'
+        })
+    // .state('main.meals', {
+    //     url: '/users/:id/meals',
+    //     templateUrl: '/partials/meals.html',
+    //     controller: 'mealsController as meals'
+    // })    // .state('meals.recommended', { //trying to consider how to put a view into a view ALT show.recommended
+    // parent: 'show',
+    // url: '/recommended',
+    // templateUrl: '/partials/recommended.html',
+    // controller: 'mealsController as meals'
+    // })
 }
