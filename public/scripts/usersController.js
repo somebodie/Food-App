@@ -4,13 +4,20 @@ angular.module('foodApp')
 
 function usersController($http, $state) {
     console.log('HEY USER!');
+    var self = this;
+
+// FIXME: Not sending request to post
+    function registerUser(user) {
+      console.log(user);
+      console.log('REGISTRATION!!');
+      $http.post('/users', user)
+        .then(function(response) {
+          console.log(response);
+        })
+    }
 
     function login() {
         console.log('RETURNING USER');
-    }
-
-    function registerUser() {
-        console.log('NEW USER STARTING!');
     }
 
     function markOnHand() {
@@ -20,15 +27,15 @@ function usersController($http, $state) {
 
     function updateWeek() {
         // Edit button should reveal update week form
+        // updateWeek() method should make a put request to the server
+
     }
-    // The select week dropdown should change the visible week, probably using an angular method getWeek()
 
     function getWeek() {
         // getWeek() should make a get request to the server for the selected week
-        // Update week form should allow meals to be dragged to different days
     }
 
     function getOverview() {
-
+      // TODO: Overview page needs each meal to be a link [this can be the partial that will show] 
     }
 }

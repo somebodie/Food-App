@@ -1,17 +1,15 @@
-<section class="signUp" ng-hide='newUser'>
+<section class="signUp">
     <div id="signupform">
-        <form>
-            <!-- will fix to show when sign up was clicked newuser = false expect when sign up function clicked and turns it true as well returnuser must be turned false-->
+        <form ng-submit='users.registerUser(user)'>
+          <!-- TODO: Need an ng-submit and corresponding angular registerUser() method (should post new user) for the form #16 -->
             <h2> Sign-up now to create your own weekly meal plan! </h2><br>
             <label for="name">First Name:</label><br>
-            <input type="text" name="name" placeholder="What's your name?"><br>
+            <input ng-model='user.name' type="text" placeholder="What's your name?"><br>
             <label for="email">Email:</label><br>
-            <input type="email" name="email" placeholder="How can we email you?"><br>
+            <input ng-model='user.email' type="email" placeholder="How can we email you?"><br>
             <label for="password">Password:</label><br>
-            <input type="text" name="password" placeholder="Please don't forget it"><br>
-            <button class="signupbutton" type="button" name="signup">Sign Up!</button>
+            <input ng-model='user.password' type="password" placeholder="Please don't forget it"><br>
+            <button class="signupbutton" type="submit">Sign Up!</button>
         </form>
         <div>
 </section>
-
-<!-- TODO: Need an ng-submit and corresponding angular registerUser() method (should post new user) for the form #16 -->
