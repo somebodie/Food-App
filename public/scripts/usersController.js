@@ -6,7 +6,6 @@ function usersController($http, $state) {
     console.log('HEY USER!');
     var self = this;
 
-// FIXME: Not sending request to post
     function registerUser(user) {
       console.log(user);
       console.log('REGISTRATION!!');
@@ -36,6 +35,8 @@ function usersController($http, $state) {
     }
 
     function getOverview() {
-      // TODO: Overview page needs each meal to be a link [this can be the partial that will show] 
+      // TODO: Overview page needs each meal to be a link [this can be the partial that will show]
     }
+
+    self.registerUser = registerUser;
 }
