@@ -18,7 +18,7 @@ router.post('/', auth.authorize, function(req, res){
     })
 });
 // Update ingredient
-router.put('/:ingredientId', function(req, res){
+router.put('/:ingredientId', auth.authorize, function(req, res){
   Meal.findById(req.params.mealId)
   .exec(function(err, meal){
     if(err) {console.log(err);}
@@ -29,5 +29,14 @@ router.put('/:ingredientId', function(req, res){
     res.json(meal);
   })
 });
-
+// Delete ingredient
+router.delete('/:ingredientId', auth.authorize, function(req, res){
+  Meal.findById(req.params.mealId)
+  .exec(function(err, meal){
+    if(err) {console.log(err);}
+    meal.ingredients.id(req.params.ingredientId).remove();
+    meal.save();
+    res.json({status:200, data:'success'});
+  })
+})
 module.exports = router;

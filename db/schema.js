@@ -28,6 +28,7 @@ var UserSchema = new Schema({
     }]
 });
 
+
 UserSchema.pre('save', function(next) {
     now = new Date();
     this.updated_at = now;
