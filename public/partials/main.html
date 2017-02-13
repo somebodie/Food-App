@@ -112,7 +112,8 @@
 
     <button type="button" name="button" ng-click='users.getWeek()'>Get Week</button>
     <button type="button" name="button" ng-click='users.updateWeek()'>Update Week</button>
-    <!-- updateWeek() method should make a put request to the server -->
+  <!-- TODO: The select week dropdown should change the visible week, probably using an angular method getWeek() -->
+
     <h1>CSS Calendar</h1>
 
     <div class="month">
@@ -172,7 +173,7 @@
     <button type="button" name="addMeal">Add Meal</button>
 
     <h3>Monday!</h3>
-
+<!-- TODO: Update week form should allow meals to be dragged to different days -->
     <ul class="meals">
         <!-- TODO: ng-repeat='meals' -->
         <li> <button type="button" name="list">Get grocery list</button></li>
