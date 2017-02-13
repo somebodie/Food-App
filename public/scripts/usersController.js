@@ -3,17 +3,17 @@ angular.module('foodApp')
     .controller('usersController', usersController)
 
 function usersController($http, $state) {
-    console.log('HEY USER!');
     var self = this;
 
     function registerUser(user) {
       console.log(user);
-      console.log('REGISTRATION!!');
       $http.post('/users', user)
         .then(function(response) {
           console.log(response);
         })
     }
+
+    self.registerUser = registerUser;
 
     function login() {
         console.log('RETURNING USER');
