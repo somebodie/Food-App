@@ -17,12 +17,10 @@ function FoodRouter($stateProvider, $urlRouterProvider) {
         .state('register', {
             url: '/register',
             templateUrl: '/partials/register.html',
-            controller: 'usersController as users'
         })
         .state('login', { //ALT: users.sessions if I can figure out the controllers
             url: '/login',
             templateUrl: '/partials/login.html',
-            controller: 'usersController as users'
         })
         .state('main', {
             url: '/main',
@@ -32,7 +30,7 @@ function FoodRouter($stateProvider, $urlRouterProvider) {
         .state('main.grocery', { //child of main to show in there view
             url: '/list', //url is http://localhost:3000/#/main/list
             templateUrl: 'partials/list.html',
-            controller: 'mealsController as meals'
+            controller: 'usersController as users'
         })
     // .state('main.meals', {
     //     url: '/users/:id/meals',

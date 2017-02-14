@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- can also do hide and show in combination where one is always false so they never show at the same time -->
 <section class="login">
     <div id="loginform">
@@ -9,8 +10,17 @@
             <label for="password">Password:</label><br>
             <input type="text" ng-model="user.password" name="password" placeholder="What's the password?"><br>
             <button class="loginbutton" type="submit" >Login!</button>
+=======
+<section class="login">
+    <div id="loginform">
+        <form ng-submit="users.login(user)">
+            <h2> Log-in now to view your weekly meal plan! </h2><br>
+            <label for="email">Email:</label><br>
+            <input ng-model="user.email" type="email" name="email" placeholder="Who are you again?"><br>
+            <label for="password">Password:</label><br>
+            <input ng-model="user.password" type="password" name="password" placeholder="What's the password?"><br>
+            <button class="loginbutton" type="submit" name="login">Login!</button>
+>>>>>>> c884702b64080fca781fa572f1aa94dd545c8fb8
         </form>
     </div>
 </section>
-
-<!-- TODO: login -->
