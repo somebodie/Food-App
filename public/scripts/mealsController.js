@@ -24,15 +24,15 @@ function mealsController($http, $state, $scope) {
       })
     }
     //
-    // function addMeal() {
-    //   // Create new meal
-    //   $http.post('/users/:id/meals')
-    //   .then(function (response) {
-    //     console.log(response);
-    //     console.log(meals);
-    //   })
-    //   // The addMeal() method should create an empty meal (should make a post request to server)
-    // }
+    function addMeal() {
+      // Create new meal
+      $http.post('/users/:id/meals')
+      .then(function (response) {
+        console.log(response);
+        console.log(meals);
+      })
+      // The addMeal() method should create an empty meal (should make a post request to server)
+    }
     //
     // function updateMeal() {
     //   // Update meal route
@@ -71,10 +71,10 @@ function mealsController($http, $state, $scope) {
     //     // Recipe show page should show nutritional information
     // }
 
-    self.showMeal = showMeal;
-    self.addMeal = addMeal;
-    self.updateMeal = updateMeal;
-    self.deleteMeal = deleteMeal;
-    self.addIngredient = addIngredient;
-    self.updateIngredient = updateIngredient;
+    // self.showMeal = showMeal;
+    // self.addMeal = addMeal;
+    // self.updateMeal = updateMeal;
+    // self.deleteMeal = deleteMeal;
+    // self.addIngredient = addIngredient;
+    // self.updateIngredient = updateIngredient;
 }
