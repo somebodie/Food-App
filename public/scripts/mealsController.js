@@ -13,6 +13,7 @@ function mealsController($http, $state, $scope) {
       .then(function(response){
         self.meals = response.recipes;
       })
+    }
       getMeals();
 
     function showMeal() {
@@ -22,50 +23,50 @@ function mealsController($http, $state, $scope) {
         console.log(response);
       })
     }
+    //
+    // function addMeal() {
+    //   // Create new meal
+    //   $http.post('/users/:id/meals')
+    //   .then(function (response) {
+    //     console.log(response);
+    //     console.log(meals);
+    //   })
+    //   // The addMeal() method should create an empty meal (should make a post request to server)
+    // }
+    //
+    // function updateMeal() {
+    //   // Update meal route
+    //   $http.put('/users/:id/meals/:mealId')
+    //   .then(function (response) {
+    //     console.log(response);
+    //     console.log(meal);
+    //   })
+    //     // updateMeal() should make a put request to the server
+    // }
+    //
+    // function deleteMeal() {
+    //   $http.delete('/users/:id/meals/:mealId')
+    //   .then(function (response) {
+    //     console.log(response);
+    //   })
+    // }
+    //
+    // function addIngredient() {
+    //   $http.post('/users/:id/:mealId/ingredients')
+    //   .then(function (response) {
+    //     console.log(response);
+    //   })
+    //     // makes a get request to the server for the entire weeks groceries
+    // }
+    //
+    // function updateIngredient() {
+    //   $http.put('/users/:id/:mealId/ingredients/:ingredientId')
+    //   .then(function (response) {
+    //     console.log(response);
+    //   })
 
-    function addMeal() {
-      // Create new meal
-      $http.post('/users/:id/meals')
-      .then(function (response) {
-        console.log(response);
-        console.log(meals);
-      })
-      // The addMeal() method should create an empty meal (should make a post request to server)
-    }
 
-    function updateMeal() {
-      // Update meal route
-      $http.put('/users/:id/meals/:mealId')
-      .then(function (response) {
-        console.log(response);
-        console.log(meal);
-      })
-        // updateMeal() should make a put request to the server
-    }
-
-    function deleteMeal() {
-      $http.delete('/users/:id/meals/:mealId')
-      .then(function (response) {
-        console.log(response);
-      })
-    }
-
-    function addIngredient() {
-      $http.post('/users/:id/:mealId/ingredients')
-      .then(function (response) {
-        console.log(response);
-      })
-        // makes a get request to the server for the entire weeks groceries
-    }
-
-    function updateIngredient() {
-      $http.put('/users/:id/:mealId/ingredients/:ingredientId')
-      .then(function (response) {
-        console.log(response);
-      })
-
-
-    }
+    // }
     // function showNuturition() {
     //     // Recipe show page should show nutritional information
     // }
