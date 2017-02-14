@@ -6,6 +6,7 @@
     <h4> {{meal.date}} </h4>
     <p> Meal: {{meal.name}} </p>
     <button ng-click="meals.showMeal(meal)" type="button">View More</button>
+    <button ng-click="meals.deleteMeal(meal)" type="button">Delete Meal</button>
     <button type="button" name="addMeal">Add Meal</button>
   </div>
 </section>
@@ -22,6 +23,9 @@
 </div>
 
 <div class="MealList" ng-show="meals.showEdit">
-  test
-    <button type="button" ng-click="meals.showEdit = !meals.showEdit" name="Editmeal"> Toggle</button>
+  <form ng-submit="meals.updateMeal(meals.currentMeal)">
+    <input type="text" ng-model="meals.currentMeal.name" name="name">
+    <input type="text" ng-model="meals.currentMeal.date" name="date">
+    <input type="submit">
+  </form>
 </div>

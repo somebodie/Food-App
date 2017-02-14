@@ -37,8 +37,8 @@ router.put('/:mealId', auth.authorize, function(req, res){
   Meal.findById(req.params.mealId)
   .exec()
   .then(function(meal){
+    console.log(req.body);
     meal.name = req.body.name;
-    meal.ingredients = req.body.ingredients;
     meal.date = req.body.date;
 
     meal.save();

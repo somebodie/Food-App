@@ -35,23 +35,23 @@ function mealsController($http, $state, $scope) {
       // The addMeal() method should create an empty meal (should make a post request to server)
     }
     //
-    // function updateMeal() {
-    //   // Update meal route
-    //   $http.put('/users/:id/meals/:mealId')
-    //   .then(function (response) {
-    //     console.log(response);
-    //     console.log(meal);
-    //   })
-    //     // updateMeal() should make a put request to the server
-    // }
+    function updateMeal(meal) {
+      // Update meal route
+      console.log(meal);
+      $http.put(`/users/${$scope.currentUser._id}/meals/${meal._id}`, meal)
+      .then(function (response) {
+        console.log(response);
+      })
+        // updateMeal() should make a put request to the server
+    }
     //
-    // function deleteMeal() {
-    //   $http.delete('/users/:id/meals/:mealId')
-    //   .then(function (response) {
-    //     console.log(response);
-    //   })
-    // }
-    //
+    function deleteMeal(meal) {
+      $http.delete(`/users/${$scope.currentUser._id}/meals/${meal._id}`)
+      .then(function (response) {
+        console.log(response);
+      })
+    }
+
     // function addIngredient() {
     //   $http.post('/users/:id/:mealId/ingredients')
     //   .then(function (response) {
@@ -74,8 +74,8 @@ function mealsController($http, $state, $scope) {
 
     self.showMeal = showMeal;
     // self.addMeal = addMeal;
-    // self.updateMeal = updateMeal;
-    // self.deleteMeal = deleteMeal;
+    self.updateMeal = updateMeal;
+    self.deleteMeal = deleteMeal;
     // self.addIngredient = addIngredient;
     // self.updateIngredient = updateIngredient;
 }
