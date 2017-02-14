@@ -2,75 +2,14 @@
     <div>
         <h2> Days of the Week <h2>
   </div>
-  <div class="DayBox">
-    <h4> Sunday </h4>
-    <p> Meal: </p>
-    <p> Date: </p>
+  <div ng-repeat="meal in meals.mealsIndex" class="DayBox">
+    <h4> {{meal.date}} </h4>
+    <p> Meal: {{meal.name}} </p>
+    <p> Ingredient: {{meal.name}} </p>
 <button type="button">View More</button>
     <button type="button" name="addMeal">Add Meal</button>
   </div>
-  <div class="DayBox">
-    <h4> Monday </h4>
-    <p> Meal: </p>
-    <p> Date: </p>
-    <button type="button" name="viewmore">View More</button>
-    <button type="button" name="addMeal">Add Meal</button>
-  </div>
-  <div class="DayBox">
-    <h4> Tuesday </h4>
-    <p> Meal: </p>
-    <p> Date: </p>
-    <button type="button" name="viewmore">View More</button>
-    <button type="button" name="addMeal">Add Meal</button>
-  </div>
-  <div class="DayBox">
-    <h4> Wednesday </h4>
-    <p> Meal: </p>
-    <p> Date: </p>
-    <button type="button" name="viewmore">View More</button>
-    <button type="button" name="addMeal">Add Meal</button>
-  </div>
-  <div class="DayBox">
-    <h4> Thursday </h4>
-    <p> Meal: </p>
-    <p> Date: </p>
-    <button type="button" name="viewmore">View More</button>
-    <button type="button" name="addMeal">Add Meal</button>
-  </div>
-  <div class="DayBox">
-    <h4> Friday </h4>
-    <p> Meal:  </p>
-    <p> Date: </p>
-    <button type="button" name="viewmore">View More</button>
-    <button type="button" name="addMeal">Add Meal</button>
-  </div>
-  <div class="DayBox">
-    <h4> Saturday </h4>
-    <p> Meal: </p>
-    <p> Date: </p>
-    <button type="button" name="viewmore">View More</button>
-    <button type="button" name="addMeal">Add Meal</button>
-  </div>
-</section>
 
-<!-- <<<<<<< HEAD
-    <h1>CSS Calendar</h1>
-<div class="Full-List">
-  <h1>  </h1>
-</div>
-
-
-<button type="button" name="button" ng-click='users.updateWeek()'>Update Week</button>
-FIXME: this will probably be a combination css and function
-TODO: Update week form should allow meals to be dragged to different days
-
-    <h3>Day of the week here</h3>  will be day selected
-
-    <ul class="meals" ng-repeat=''>
-        <li>{{meal}}<button type="button" name="list">Get grocery list</button></li> TODO: Overview page needs each meal to be a link [this can be the partial that will show]
-          <div class="grocery list">
-            <ui-view>
-======= -->
 <div class="MealList">
   <h3> What to eat... </h3>
   <p> Name: </p>
@@ -78,28 +17,3 @@ TODO: Update week form should allow meals to be dragged to different days
   <button type="button" name="Editmeal"> Edit Meal</button>
 
 </div>
-
-
-
-
-
-<!-- <<<<<<< HEAD
-    <h3>Monday!</h3>
-<!-- TODO: Update week form should allow meals to be dragged to different days -->
-    <!-- <ul class="meals"> -->
-        <!-- TODO: ng-repeat='meals' -->
-        <!-- <li> <button type="button" name="list">Get grocery list</button></li> -->
-
-        <!-- <li> <button type="button" name="list">Get grocery list</button></li> -->
-
-        <!-- TODO: Overview page needs each meal to be a link [this can be the partial that will show] -->
-        <!-- <div class="grocery list">
-            <ui-view> -->
-                <!-- grocery list -->
-    <!--         </ui-view>
-              </div>
-        </ul> -->
-
-
-
-    <!-- TODO: If make it to reach must figure out where to add recommended -->

@@ -11,8 +11,8 @@ function mealsController($http, $state, $scope) {
       $http.get(`/users/${$scope.currentUser._id}/meals`)
       .then(function(response){
         console.log(response);
-        self.meals = response.data;
-        console.log(self.meals);
+        self.mealsIndex = response.data;
+        console.log(self.mealsIndex);
       })
     }
       getMeals();
