@@ -15,10 +15,10 @@
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 </head>
 
-<body>
+<body ng-controller="usersController as users">
     <header>
         <!-- nav bar -->
-        <nav ng-controller="usersController as users" class="navbar">
+        <nav class="navbar">
             <ul class="ul-navbar">
                 <li class="li-navbar" ng-click="users.signOut()">Sign Out</li>
                 <li class="li-navbar" ui-sref='login'>Log In</li>

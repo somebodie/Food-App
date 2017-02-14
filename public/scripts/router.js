@@ -17,12 +17,10 @@ function FoodRouter($stateProvider, $urlRouterProvider) {
         .state('register', {
             url: '/register',
             templateUrl: '/partials/register.html',
-            controller: 'usersController as users'
         })
         .state('login', { //ALT: users.sessions if I can figure out the controllers
             url: '/login',
             templateUrl: '/partials/login.html',
-            controller: 'usersController as users'
         })
         .state('main', {
             url: '/main',
