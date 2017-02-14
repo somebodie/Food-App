@@ -14,5 +14,7 @@ function mealsController($http, $state, $scope) {
     };
     getMeals();
 
-
+    function createWeek(){
+      
+    }
 }
