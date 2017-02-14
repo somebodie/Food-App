@@ -15,7 +15,8 @@ Approach Taken:
 
 Unsolved Problems:
 	-Adding Ingredients needs CUD.
-	-Some of the CSS could still be retouched and be made in terms of making the
+	-Some of the CSS could still be retouched and be made in terms of making the site look better.
+	- Dates could be displayed better (maybe use filter?)
 	- Removing the Signup and Login buttons above to just sign out when a user is logged in.
 	- Reroute forms to update without reloading. (need state.go)
-	- Once those are complete API routes. 
+	- Once those are complete API routes.
