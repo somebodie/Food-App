@@ -3,9 +3,9 @@ angular.module('foodApp')
     .controller('mealsController', mealsController)
 
 function mealsController($http, $state, $scope) {
-    console.log('YOUR EATTING MEALS NOW!');
 
     var self = this;
+    self.showEdit = false;
 
     function getMeals(){
       $http.get(`/users/${$scope.currentUser._id}/meals`)
@@ -17,11 +17,11 @@ function mealsController($http, $state, $scope) {
     }
       getMeals();
 
-    function showMeal() {
-      // Meals index route
-      $http.get('/users/:id/meals') //FIXME: need the id to fix with get route
+    function showMeal(meal) {
+      $http.get(`/users/${$scope.currentUser._id}/meals/${meal._id}`)
       .then(function (response) {
-        console.log(response);
+        self.currentMeal = response.data;
+        console.log(self.currentMeal);
       })
     }
     //
@@ -72,7 +72,7 @@ function mealsController($http, $state, $scope) {
     //     // Recipe show page should show nutritional information
     // }
 
-    // self.showMeal = showMeal;
+    self.showMeal = showMeal;
     // self.addMeal = addMeal;
     // self.updateMeal = updateMeal;
     // self.deleteMeal = deleteMeal;

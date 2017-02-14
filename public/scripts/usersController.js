@@ -18,7 +18,6 @@ function usersController($http, $state, $scope) {
     function login(user) {
         $http.post('/sessions/login', user)
         .then(function(response){
-          console.log(response);
           $scope.currentUser = response.data.data;
           $state.go('main')
         });

@@ -1,19 +1,27 @@
-<section class="weekly-section">
+ <section class="weekly-section">
     <div>
         <h2> Days of the Week <h2>
   </div>
   <div ng-repeat="meal in meals.mealsIndex" class="DayBox">
     <h4> {{meal.date}} </h4>
     <p> Meal: {{meal.name}} </p>
-    <p> Ingredient: {{meal.name}} </p>
-<button type="button">View More</button>
+    <button ng-click="meals.showMeal(meal)" type="button">View More</button>
     <button type="button" name="addMeal">Add Meal</button>
   </div>
-
-<div class="MealList">
+</section>
+<div class="MealList" ng-hide="meals.showEdit">
   <h3> What to eat... </h3>
-  <p> Name: </p>
-  <p> Ingredients: </p>
-  <button type="button" name="Editmeal"> Edit Meal</button>
+  <p> Name: {{meals.currentMeal.name}} </p>
+  <p> Date: {{meals.currentMeal.date}} </p>
+  <div ng-repeat="ingredient in meals.currentMeal.ingredients">
+    <p > Ingredient: {{ingredient.name}} </p>
+    <p > Quantity: {{ingredient.qty}} </p>
+  </div>
+  <button type="button" ng-click="meals.showEdit = !meals.showEdit" name="Editmeal"> Edit Meal</button>
 
+</div>
+
+<div class="MealList" ng-show="meals.showEdit">
+  test
+    <button type="button" ng-click="meals.showEdit = !meals.showEdit" name="Editmeal"> Toggle</button>
 </div>

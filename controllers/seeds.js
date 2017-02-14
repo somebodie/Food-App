@@ -67,7 +67,7 @@ var Ingredient = require('../models/ingredient');
   var meal2 = new Meal({
     created_at: new Date(),
     updated_at: new Date(),
-    name: "Delicious food",
+    name: "Awesome food",
     ingredients: [ingredient1, ingredient2],
     date: sunday,
     _creator: user1._id
@@ -81,7 +81,7 @@ var Ingredient = require('../models/ingredient');
   var meal3 = new Meal({
     created_at: new Date(),
     updated_at: new Date(),
-    name: "Delicious food",
+    name: "Terrific food",
     ingredients: [ingredient1, ingredient2],
     date: sunday,
     _creator: user1._id
