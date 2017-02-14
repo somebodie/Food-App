@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/david-chua/Food-App/issues"
   },
-  "homepage": "https://github.com/david-chua/Food-App#readme"
+  "homepage": "https://github.com/david-chua/Food-App#readme",
+  "engines": {
+   "node": "7.4.0"
+  }
 }

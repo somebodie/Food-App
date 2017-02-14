@@ -33,6 +33,7 @@ app.use('/users/:id/meals', mealsController);
 app.use('/users/:id/:mealId/ingredients', ingredientsController);
 app.use('/sessions', sessionsController);
 
-app.listen(3000, function() {
+var port = process.env.PORT || 3000;
+app.listen(port, function() {
     console.log("Can You Smell What the Rock is Cooking?");
 });
