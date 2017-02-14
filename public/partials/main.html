@@ -7,7 +7,7 @@
     <p> Meal: {{meal.name}} </p>
     <button ng-click="meals.showMeal(meal)" type="button">View More</button>
     <button ng-click="meals.deleteMeal(meal)" type="button">Delete Meal</button>
-    <button type="button" name="addMeal">Add Meal</button>
+    <button type="button" ng-click="meals.showAdd = !meals.showAdd" name="addMeal">Add Meal</button>
   </div>
 </section>
 <div class="MealList" ng-hide="meals.showEdit">
@@ -26,6 +26,14 @@
   <form ng-submit="meals.updateMeal(meals.currentMeal)">
     <input type="text" ng-model="meals.currentMeal.name" name="name">
     <input type="text" ng-model="meals.currentMeal.date" name="date">
+    <input type="submit">
+  </form>
+</div>
+
+<div class="MealList" ng-show="meals.showAdd">
+  <form ng-submit="meals.addMeal(meal)">
+    <input type="text" ng-model="meal.name" name="name">
+    <input type="text" ng-model="meal.date" name="date">
     <input type="submit">
   </form>
 </div>
