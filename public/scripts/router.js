@@ -5,7 +5,6 @@ angular.module('foodApp', ['ui.router'])
 FoodRouter.$inject = ['$stateProvider', '$urlRouterProvider'];
 
 function FoodRouter($stateProvider, $urlRouterProvider) {
-    console.log('FOOD APP ROUTER IS LOADING');
     // if url not recongized will go to index
     $urlRouterProvider.otherwise('/');
 

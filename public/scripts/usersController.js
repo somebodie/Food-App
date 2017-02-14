@@ -22,9 +22,12 @@ function usersController($http, $state, $scope) {
     function login(user) {
         $http.post('/sessions/login', user)
         .then(function(response){
+<<<<<<< HEAD
           console.log(response);
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 4616cbe4e70dc87c8f369d82dd8debb5fe70f638
           $scope.currentUser = response.data.data;
 >>>>>>> c884702b64080fca781fa572f1aa94dd545c8fb8
           $state.go('main')
