@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/david-chua/Food-App#readme",
   "engines": {
-   "node": "6.9.1"
+   "node": "6.9.1",
+   "npm": "4.0.5"
   }
 }
