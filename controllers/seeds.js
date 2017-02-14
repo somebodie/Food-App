@@ -36,25 +36,58 @@ var Ingredient = require('../models/ingredient');
     console.log("User created!");
   });
 
-  // var ingredient1 = new Ingredient({
-  //   name: "onion",
-  //   qty: "2 cups"
-  // })
-  //
-  // var ingredient2 = new Ingredient({
-  //   name: "garlic",
-  //   qty: "2 cloves"
-  // })
-  //
-  // var sunday = new Date(2017, 2, 12);
-  // var monday = new Date(2017, 2, 13);
-  // var tuesday = new Date(2017, 2, 14);
-  //
-  // var meal1 = new Meal({
-  //   created_at: new Date(),
-  //   updated_at: new Date(),
-  //   name: "Delicious food",
-  //   ingredients: [ingredient1, ingredient2],
-  //   date: sunday,
-  //   _creator: user1._id
-  // });
+  var ingredient1 = new Ingredient({
+    name: "onion",
+    qty: "2 cups"
+  })
+
+  var ingredient2 = new Ingredient({
+    name: "garlic",
+    qty: "2 cloves"
+  })
+
+  var sunday = new Date(2017, 2, 12);
+  var monday = new Date(2017, 2, 13);
+  var tuesday = new Date(2017, 2, 14);
+
+  var meal1 = new Meal({
+    created_at: new Date(),
+    updated_at: new Date(),
+    name: "Delicious food",
+    ingredients: [ingredient1, ingredient2],
+    date: sunday,
+    _creator: user1._id
+  });
+
+  meal1.save(function(err){
+    if(err){console.log(err);}
+    console.log("Meal 1 created!");
+  })
+
+  var meal2 = new Meal({
+    created_at: new Date(),
+    updated_at: new Date(),
+    name: "Delicious food",
+    ingredients: [ingredient1, ingredient2],
+    date: sunday,
+    _creator: user1._id
+  });
+
+  meal2.save(function(err){
+    if(err){console.log(err);}
+    console.log("Meal 2 created!");
+  })
+
+  var meal3 = new Meal({
+    created_at: new Date(),
+    updated_at: new Date(),
+    name: "Delicious food",
+    ingredients: [ingredient1, ingredient2],
+    date: sunday,
+    _creator: user1._id
+  });
+
+  meal3.save(function(err){
+    if(err){console.log(err);}
+    console.log("Meal 3 created!");
+  })
