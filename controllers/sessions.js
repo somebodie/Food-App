@@ -5,7 +5,7 @@ var auth = require('../helpers/auth.js')
 var User = require('../models/user.js');
 
 router.post('/login', auth.loginUser, function(req, res) {
-    console.log(req.session.currentUser);
+    console.log('sessions', req.session.currentUser);
     res.json({
         status: 200,
         data: req.session.currentUser
