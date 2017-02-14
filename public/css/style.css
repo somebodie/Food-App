@@ -97,6 +97,11 @@
   font-size: 3em;
   text-align: center;
   text-shadow: .1em .2em #5F96EB;
+  animation-name: typing;
+}
+
+@keyframes typing {
+
 }
 .user-page{
   font-family: 'Anton', sans-serif;
@@ -198,7 +203,7 @@ height: 500px;
 overflow: scroll;
 text-align: center;
 margin-top: 8%;
-border-radius: 20px;
+
 }
 .DayBox {
   font-size: 1.5em;
@@ -212,4 +217,11 @@ border-radius: 20px;
   height: 500px;
   text-align: center;
 
+}
+
+/*CSS for Meal Schema and Ingredients Schema*/
+.MealList{
+  margin-top: 8%;
+  text-align: center;
+  display: block;
 }
