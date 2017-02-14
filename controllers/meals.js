@@ -21,6 +21,7 @@ router.post('/', auth.authorize, function(req, res) {
         .then(function(user) {
             user.save(function(err) {
                 if (err) {console.log(err)}
+                console.log(req.body);
                 var meal = new Meal({
                     name: req.body.name,
                     ingredients: req.body.ingredients,

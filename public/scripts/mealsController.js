@@ -6,6 +6,7 @@ function mealsController($http, $state, $scope) {
 
     var self = this;
     self.showEdit = false;
+    self.showAdd = false;
 
     function getMeals(){
       $http.get(`/users/${$scope.currentUser._id}/meals`)
@@ -25,12 +26,11 @@ function mealsController($http, $state, $scope) {
       })
     }
     //
-    function addMeal() {
+    function addMeal(meal) {
       // Create new meal
-      $http.post('/users/:id/meals')
+      $http.post(`/users/${$scope.currentUser._id}/meals`, meal)
       .then(function (response) {
         console.log(response);
-        console.log(meals);
       })
       // The addMeal() method should create an empty meal (should make a post request to server)
     }
@@ -73,7 +73,7 @@ function mealsController($http, $state, $scope) {
     // }
 
     self.showMeal = showMeal;
-    // self.addMeal = addMeal;
+    self.addMeal = addMeal;
     self.updateMeal = updateMeal;
     self.deleteMeal = deleteMeal;
     // self.addIngredient = addIngredient;
