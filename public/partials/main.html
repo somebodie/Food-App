@@ -1,12 +1,18 @@
 <section class="weekly-section">
-  <div>
-    <h2> Days of the Week <h2>
+    <div>
+        <h2> Days of the Week <h2>
   </div>
+
+      <button type="button" name="button" ng-click='users.getWeek()'>Get Week</button>
+      <!-- TODO: The select week dropdown should change the visible week, probably using an angular method getWeek() -->
+      <!-- FIXME: this will have to grab a day that is tied to calendar -->
+
   <div class="DayBox">
+    <!-- possible ng-repeat day of week -->
     <h4> Sunday </h4>
     <p> Meal: </p>
     <p> Date: </p>
-    <button type="button" name="addMeal">View More</button>
+    <button type="button" ng-click='meals.showMeal()'>View More</button>
     <button type="button" name="addMeal">Add Meal</button>
   </div>
   <div class="DayBox">
@@ -53,39 +59,27 @@
   </div>
 </section>
 
-<<<<<<< HEAD
-    <button type="button" name="button" ng-click='users.getWeek()'>Get Week</button>
-    <button type="button" name="button" ng-click='users.updateWeek()'>Update Week</button>
-  <!-- TODO: The select week dropdown should change the visible week, probably using an angular method getWeek() -->
-
     <h1>CSS Calendar</h1>
-=======
 <div class="Full-List">
   <h1>  </h1>
 </div>
->>>>>>> 2fc5aac33a1a565e33fa3440447e0cc8b4d368ea
 
 
-
-
-<<<<<<< HEAD
-    <h3>Monday!</h3>
+<button type="button" name="button" ng-click='users.updateWeek()'>Update Week</button>
+<!-- FIXME: this will probably be a combination css and function -->
 <!-- TODO: Update week form should allow meals to be dragged to different days -->
-    <ul class="meals">
-        <!-- TODO: ng-repeat='meals' -->
-        <li> <button type="button" name="list">Get grocery list</button></li>
-=======
 
-        <!-- <li> <button type="button" name="list">Get grocery list</button></li> -->
->>>>>>> 2fc5aac33a1a565e33fa3440447e0cc8b4d368ea
-        <!-- TODO: Overview page needs each meal to be a link [this can be the partial that will show] -->
-        <!-- <div class="grocery list">
-            <ui-view> -->
+    <h3>Day of the week here</h3>  <!-- will be day selected  -->
+
+    <!-- <ul class="meals" ng-repeat=''> -->
+        <li>{{meal}}<button type="button" name="list">Get grocery list</button></li> <!-- TODO: Overview page needs each meal to be a link [this can be the partial that will show] -->
+          <div class="grocery list">
+            <ui-view>
                 <!-- grocery list -->
-            <!-- </ui-view> -->
-        <!-- </div>
-    </ul> -->
-    <!-- TODO: If make it to reach must figure out where to add it -->
-<!-- </body> -->
+            </ui-view>
+          </div>
+    </ul>
 
-<!-- </html> -->
+
+
+    <!-- TODO: If make it to reach must figure out where to add recommended -->

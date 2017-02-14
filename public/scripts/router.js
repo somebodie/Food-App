@@ -32,7 +32,7 @@ function FoodRouter($stateProvider, $urlRouterProvider) {
         .state('main.grocery', { //child of main to show in there view
             url: '/list', //url is http://localhost:3000/#/main/list
             templateUrl: 'partials/list.html',
-            controller: 'mealsController as meals'
+            controller: 'usersController as users'
         })
     // .state('main.meals', {
     //     url: '/users/:id/meals',
