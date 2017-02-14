@@ -2,11 +2,8 @@
 angular.module('foodApp')
     .controller('usersController', usersController)
 
-<<<<<<< HEAD
-function usersController($http, $state) {
-=======
 function usersController($http, $state, $scope) {
->>>>>>> c884702b64080fca781fa572f1aa94dd545c8fb8
+
     var self = this;
 
     function registerUser(user) {
