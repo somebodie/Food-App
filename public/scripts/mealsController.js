@@ -45,13 +45,13 @@ function mealsController($http, $state, $scope) {
         // updateMeal() should make a put request to the server
     }
     //
-    // function deleteMeal() {
-    //   $http.delete('/users/:id/meals/:mealId')
-    //   .then(function (response) {
-    //     console.log(response);
-    //   })
-    // }
-    //
+    function deleteMeal(meal) {
+      $http.delete(`/users/${$scope.currentUser._id}/meals/${meal._id}`)
+      .then(function (response) {
+        console.log(response);
+      })
+    }
+
     // function addIngredient() {
     //   $http.post('/users/:id/:mealId/ingredients')
     //   .then(function (response) {
@@ -75,7 +75,7 @@ function mealsController($http, $state, $scope) {
     self.showMeal = showMeal;
     // self.addMeal = addMeal;
     self.updateMeal = updateMeal;
-    // self.deleteMeal = deleteMeal;
+    self.deleteMeal = deleteMeal;
     // self.addIngredient = addIngredient;
     // self.updateIngredient = updateIngredient;
 }
