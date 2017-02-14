@@ -2,7 +2,7 @@
 angular.module('foodApp')
     .controller('usersController', usersController)
 
-function usersController($http, $state) {
+function usersController($http, $state, $scope) {
     var self = this;
 
     function registerUser(user) {
@@ -19,6 +19,7 @@ function usersController($http, $state) {
         $http.post('/sessions/login', user)
         .then(function(response){
           console.log(response);
+          $scope.currentUser = response.data.data;
           $state.go('main')
         });
     }
