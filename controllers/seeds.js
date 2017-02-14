@@ -7,6 +7,9 @@ var Meal = require('../models/meal');
 var User = require('../models/user');
 var Ingredient = require('../models/ingredient');
 
+  var mongoURI = process.env.MONGODB_URI || "mongodb://localhost/food_app"
+  mongoose.connect(mongoURI);
+
   // Remove existing data (Removed for deployment)
   Meal.remove({}, function(err){
     console.log(err);
