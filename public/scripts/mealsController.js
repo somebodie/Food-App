@@ -2,10 +2,18 @@
 angular.module('foodApp')
     .controller('mealsController', mealsController)
 
-function mealsController($http, $state) {
+function mealsController($http, $state, $scope) {
     console.log('YOUR EATTING MEALS NOW!');
 
     var self = this;
+
+    function getMeals(){
+      console.log($scope.currentUser);
+      $http.get(`/users/${$scope.currentUser._id}/meals`)
+      .then(function(response){
+        self.meals = response.recipes;
+      })
+      getMeals();
 
     function showMeal() {
       // Meals index route
@@ -55,6 +63,8 @@ function mealsController($http, $state) {
       .then(function (response) {
         console.log(response);
       })
+
+
     }
     // function showNuturition() {
     //     // Recipe show page should show nutritional information
