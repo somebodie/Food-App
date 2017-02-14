@@ -8,10 +8,11 @@ function mealsController($http, $state, $scope) {
     var self = this;
 
     function getMeals(){
-      console.log($scope.currentUser);
       $http.get(`/users/${$scope.currentUser._id}/meals`)
       .then(function(response){
-        self.meals = response.recipes;
+        console.log(response);
+        self.meals = response.data;
+        console.log(self.meals);
       })
     }
       getMeals();
