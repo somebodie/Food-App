@@ -1,6 +1,7 @@
  <section class="weekly-section">
     <div>
         <h2> Days of the Week <h2>
+        <button type="button" ng-click="meals.showAdd = !meals.showAdd" name="addMeal">Add Meal</button>
   </div>
   <div ng-repeat="meal in meals.mealsIndex" class="DayBox">
     <h4> {{meal.date | date: "fullDate"}} </h4>
