@@ -7,6 +7,7 @@ var usersController = require('./controllers/users.js');
 var mealsController = require('./controllers/meals.js');
 var sessionsController = require('./controllers/sessions.js');
 var ingredientsController = require('./controllers/ingredients.js');
+var seedsController = require('./controllers/seeds.js');
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use('/users', usersController);
 app.use('/users/:id/meals', mealsController);
 app.use('/users/:id/:mealId/ingredients', ingredientsController);
 app.use('/sessions', sessionsController);
+app.use('/seeds', seedsController);
 
 var port = process.env.PORT || 3000;
 app.listen(port, function() {

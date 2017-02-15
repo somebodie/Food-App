@@ -2,13 +2,14 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt');
+var express = require('express');
+var router = express.Router();
 // Require files
 var Meal = require('../models/meal');
 var User = require('../models/user');
 var Ingredient = require('../models/ingredient');
 
-  var mongoURI = process.env.MONGODB_URI || "mongodb://localhost/food_app"
-  mongoose.connect(mongoURI);
+router.get('/', function(req, res){
 
   // Remove existing data (Removed for deployment)
   Meal.remove({}, function(err){
@@ -91,3 +92,9 @@ var Ingredient = require('../models/ingredient');
     if(err){console.log(err);}
     console.log("Meal 3 created!");
   })
+
+  res.send('seeded');
+
+})
+
+module.exports = router;
