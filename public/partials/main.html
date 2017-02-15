@@ -3,7 +3,7 @@
         <h2> Days of the Week <h2>
   </div>
   <div ng-repeat="meal in meals.mealsIndex" class="DayBox">
-    <h4> {{meal.date}} </h4>
+    <h4> {{meal.date | date: "fullDate"}} </h4>
     <p> Meal: {{meal.name}} </p>
     <button ng-click="meals.showMeal(meal)" type="button">View More</button>
     <button ng-click="meals.deleteMeal(meal)" type="button">Delete Meal</button>
@@ -13,7 +13,7 @@
 <div class="MealList" ng-hide="meals.showEdit">
   <h3> What to eat... </h3>
   <p> Name: {{meals.currentMeal.name}} </p>
-  <p> Date: {{meals.currentMeal.date}} </p>
+  <p> Date: {{meals.currentMeal.date | date: "fullDate"}} </p>
   <div ng-repeat="ingredient in meals.currentMeal.ingredients">
     <p > Ingredient: {{ingredient.name}} </p>
     <p > Quantity: {{ingredient.qty}} </p>
