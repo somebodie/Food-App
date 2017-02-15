@@ -31,6 +31,7 @@ function mealsController($http, $state, $scope) {
       $http.post(`/users/${$scope.currentUser._id}/meals`, meal)
       .then(function (response) {
         console.log(response);
+        $state.reload();
       })
       // The addMeal() method should create an empty meal (should make a post request to server)
     }
@@ -41,6 +42,7 @@ function mealsController($http, $state, $scope) {
       $http.put(`/users/${$scope.currentUser._id}/meals/${meal._id}`, meal)
       .then(function (response) {
         console.log(response);
+        $state.reload();
       })
         // updateMeal() should make a put request to the server
     }
@@ -49,6 +51,7 @@ function mealsController($http, $state, $scope) {
       $http.delete(`/users/${$scope.currentUser._id}/meals/${meal._id}`)
       .then(function (response) {
         console.log(response);
+        $state.reload();
       })
     }
 
